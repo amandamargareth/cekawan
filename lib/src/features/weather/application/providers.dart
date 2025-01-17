@@ -31,15 +31,11 @@ final notificationProvider = FutureProvider.autoDispose<String>((ref) async {
   final temp = weatherData.temp.celsius
       .toInt(); // Menggunakan .value untuk mendapatkan suhu dalam Celsius
 
-  if (temp is num) {
-    if (temp <= 15) {
-      return "Jangan lupa pake jaket ya, dingin! ❄️ (Kota: $city)";
-    } else if (temp <= 25) {
-      return "Cuaca sejuk, tetap semangat! 🌤️ (Kota: $city)";
-    } else {
-      return "Panas banget, jangan lupa minum air! ☀️ (Kota: $city)";
-    }
+  if (temp <= 15) {
+    return "Jangan lupa pake jaket ya, dingin! ❄️ ";
+  } else if (temp <= 25) {
+    return "Cuaca sejuk, tetap semangat! 🌤️ ";
   } else {
-    return "Data temperatur tidak valid. (Kota: $city)";
+    return "Panas banget, jangan lupa minum air! ☀️ ";
   }
 });

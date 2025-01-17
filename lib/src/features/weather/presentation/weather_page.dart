@@ -10,31 +10,31 @@ class WeatherPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: AppColors.rainGradient,
+    return Center(
+      child: Scaffold(
+        body: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: AppColors.rainGradient,
+            ),
           ),
-        ),
-        child: const SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Spacer(),
-              Text("WELCOME TO CEKAWAN!"),
-              Spacer(),
-              CitySearchBox(),
-              Spacer(),
-              CurrentWeather(),
-              Spacer(),
-              HourlyWeather(),
-              Spacer(),
-            ],
+          child: const SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Spacer(),
+                CitySearchBox(),
+                Spacer(),
+                CurrentWeather(),
+                Spacer(),
+                HourlyWeather(),
+                Spacer(),
+              ],
+            ),
           ),
         ),
       ),
