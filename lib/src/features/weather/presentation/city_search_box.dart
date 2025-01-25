@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:open_weather_example_flutter/src/constants/app_colors.dart';
-import 'package:open_weather_example_flutter/src/features/weather/application/providers.dart';
+import 'package:cekawan/src/constants/app_colors.dart';
+import 'package:cekawan/src/features/weather/application/providers.dart';
 
 class CitySearchBox extends ConsumerStatefulWidget {
   const CitySearchBox({super.key});
@@ -42,6 +42,8 @@ class _CitySearchRowState extends ConsumerState<CitySearchBox> {
                 textAlign: TextAlign.center,
                 style: const TextStyle(color: Colors.black),
                 decoration: const InputDecoration(
+                  hintText: 'Isilah dengan kota/kabupaten yang ingin dicari',
+                  hintStyle: TextStyle(color: Colors.grey),
                   fillColor: Colors.white,
                   filled: true,
                   border: OutlineInputBorder(

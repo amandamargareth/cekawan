@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:open_weather_example_flutter/src/features/weather/data/weather_repository.dart';
-import 'package:open_weather_example_flutter/src/features/weather/domain/forecast/forecast_data.dart';
-import 'package:open_weather_example_flutter/src/features/weather/domain/weather/weather_data.dart';
+import 'package:cekawan/src/features/weather/data/weather_repository.dart';
+import 'package:cekawan/src/features/weather/domain/forecast/forecast_data.dart';
+import 'package:cekawan/src/features/weather/domain/weather/weather_data.dart';
 
 final cityProvider = StateProvider<String>((ref) {
   return 'Bandung';
@@ -28,8 +28,8 @@ final notificationProvider = FutureProvider.autoDispose<String>((ref) async {
   final weatherData = await ref.watch(currentWeatherProvider.future);
 
   // Mengakses suhu dari WeatherData
-  final temp = weatherData.temp.celsius
-      .toInt(); // Menggunakan .value untuk mendapatkan suhu dalam Celsius
+  final temp = weatherData.temp.celsius.toInt();
+  // Menggunakan .value untuk mendapatkan suhu dalam Celsius
 
   if (temp <= 15) {
     return "Jangan lupa pake jaket ya, dingin! ❄️ ";

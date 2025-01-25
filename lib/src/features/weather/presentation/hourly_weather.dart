@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
-import 'package:open_weather_example_flutter/src/features/weather/application/providers.dart';
-import 'package:open_weather_example_flutter/src/features/weather/domain/weather/weather_data.dart';
-import 'package:open_weather_example_flutter/src/features/weather/presentation/weather_icon_image.dart';
+import 'package:cekawan/src/features/weather/application/providers.dart';
+import 'package:cekawan/src/features/weather/domain/weather/weather_data.dart';
+import 'package:cekawan/src/features/weather/presentation/weather_icon_image.dart';
 
 class HourlyWeather extends ConsumerWidget {
   const HourlyWeather({super.key});
@@ -60,6 +60,11 @@ class HourlyWeatherItem extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           WeatherIconImage(iconUrl: data.iconUrl, size: 48),
+          const SizedBox(height: 8),
+          Text(
+            (data.description),
+            style: textTheme.bodySmall!.copyWith(fontWeight: fontWeight),
+          ),
           const SizedBox(height: 8),
           Text(
             '$temp°',

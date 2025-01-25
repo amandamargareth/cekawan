@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:open_weather_example_flutter/src/features/weather/application/providers.dart';
-import 'package:open_weather_example_flutter/src/features/weather/domain/weather/weather_data.dart';
-import 'package:open_weather_example_flutter/src/features/weather/presentation/weather_icon_image.dart';
+import 'package:cekawan/src/features/weather/application/providers.dart';
+import 'package:cekawan/src/features/weather/domain/weather/weather_data.dart';
+import 'package:cekawan/src/features/weather/presentation/weather_icon_image.dart';
 
 class CurrentWeather extends ConsumerWidget {
   const CurrentWeather({super.key});
